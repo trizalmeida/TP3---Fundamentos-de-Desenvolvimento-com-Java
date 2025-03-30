@@ -1,0 +1,228 @@
+// Sistema de Gerenciamento do Mercadinho
+
+//Exercício 2: Criando a Classe “Produto”
+public class Produto {
+    String nome;
+    double preco;
+    int quantidadeEmEstoque;
+
+    public Produto(String nome, double preco, int quantidadeEmEstoque) {
+        this.nome = nome;
+        this.preco = preco;
+        this.quantidadeEmEstoque = quantidadeEmEstoque;
+    }
+}
+
+// Exercício 3: Métodos Básicos da Classe “Produto”
+public class Produto {
+    String nome;
+    double preco;
+    int quantidadeEmEstoque;
+
+    public Produto(String nome, double preco, int quantidadeEmEstoque) {
+        this.nome = nome;
+        this.preco = preco;
+        this.quantidadeEmEstoque = quantidadeEmEstoque;
+    }
+
+    public void alterarPreco(double novoPreco) {
+        this.preco = novoPreco;
+    }
+
+    public void alterarQuantidade(int novaQuantidade) {
+        this.quantidadeEmEstoque = novaQuantidade;
+    }
+
+    public void exibirInformacoes() {
+        System.out.println("Produto: " + nome);
+        System.out.println("Preço: R$ " + preco);
+        System.out.println("Quantidade em estoque: " + quantidadeEmEstoque);
+    }
+}
+
+// Exercício 4: Testando a Classe “Produto”
+public class TestaProduto {
+    public static void main(String[] args) {
+        Produto produto = new Produto("Arroz", 5.50, 100);
+        
+        produto.exibirInformacoes();
+
+        produto.alterarPreco(6.00);
+        produto.alterarQuantidade(120);
+
+        produto.exibirInformacoes();
+    }
+}
+
+// Exercício 5: Criando Métodos de Propriedade
+public class Produto {
+    String nome;
+    double preco;
+    int quantidadeEmEstoque;
+
+    public Produto(String nome, double preco, int quantidadeEmEstoque) {
+        this.nome = nome;
+        this.preco = preco;
+        this.quantidadeEmEstoque = quantidadeEmEstoque;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String novoNome) {
+        this.nome = novoNome;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double novoPreco) {
+        this.preco = novoPreco;
+    }
+
+    public int getQuantidadeEmEstoque() {
+        return quantidadeEmEstoque;
+    }
+
+    public void setQuantidadeEmEstoque(int novaQuantidade) {
+        this.quantidadeEmEstoque = novaQuantidade;
+    }
+
+    public void exibirInformacoes() {
+        System.out.println("Produto: " + nome);
+        System.out.println("Preço: R$ " + preco);
+        System.out.println("Quantidade em estoque: " + quantidadeEmEstoque);
+    }
+}
+
+// Exercício 6: Adicionando Construtores à Classe “Produto”
+public class Produto {
+    String nome;
+    double preco;
+    int quantidadeEmEstoque;
+
+    public Produto(String nome, double preco, int quantidadeEmEstoque) {
+        this.nome = nome;
+        this.preco = preco;
+        this.quantidadeEmEstoque = quantidadeEmEstoque;
+    }
+
+    public void exibirInformacoes() {
+        System.out.println("Produto: " + nome);
+        System.out.println("Preço: R$ " + preco);
+        System.out.println("Quantidade em estoque: " + quantidadeEmEstoque);
+    }
+}
+
+public class TestaProduto {
+    public static void main(String[] args) {
+        Produto produto = new Produto("Feijão", 4.50, 200);
+        produto.exibirInformacoes();
+    }
+}
+
+// Exercício 7: Modelando uma Conta Bancária
+public class Conta {
+    String titular;
+    int numero;
+    String agencia;
+    double saldo;
+    String dataAbertura;
+
+    public Conta(String titular, int numero, String agencia, double saldo, String dataAbertura) {
+        this.titular = titular;
+        this.numero = numero;
+        this.agencia = agencia;
+        this.saldo = saldo;
+        this.dataAbertura = dataAbertura;
+    }
+}
+
+// Exercício 8: Criando Métodos
+public class Conta {
+    String titular;
+    int numero;
+    String agencia;
+    double saldo;
+    String dataAbertura;
+
+    public Conta(String titular, int numero, String agencia, double saldo, String dataAbertura) {
+        this.titular = titular;
+        this.numero = numero;
+        this.agencia = agencia;
+        this.saldo = saldo;
+        this.dataAbertura = dataAbertura;
+    }
+
+    public void saca(double valor) {
+        saldo -= valor;
+    }
+
+    public void deposita(double valor) {
+        saldo += valor;
+    }
+
+    public double calculaRendimento() {
+        return saldo * 0.1;
+    }
+}
+
+// Exercício 9: Vamos testar nossa classe!
+public class TestaConta {
+    public static void main(String[] args) {
+        Conta conta = new Conta("Beatriz", 12345, "Agência 107", 50000.0, "10/03/2025");
+        
+        System.out.println("Saldo inicial: R$ " + conta.saldo);
+        
+        conta.deposita(500);
+        System.out.println("Saldo após depósito: R$ " + conta.saldo);
+        
+        conta.saca(200);
+        System.out.println("Saldo após saque: R$ " + conta.saldo);
+        
+        double rendimento = conta.calculaRendimento();
+        System.out.println("Rendimento: R$ " + rendimento);
+    }
+}
+
+// Exercício 10: Definindo Classes para Formas Geométricas
+public class Circulo {
+    double raio;
+}
+
+public class Esfera {
+    double raio;
+}
+
+// Exercício 11: Criando Métodos de Cálculo
+public class Circulo {
+    double raio;
+
+    public double calcularArea() {
+        return Math.PI * raio * raio;
+    }
+}
+
+public class Esfera {
+    double raio;
+
+    public double calcularVolume() {
+        return (4.0 / 3.0) * Math.PI * raio * raio * raio;
+    }
+}
+
+//Exercício 12: Testando as Classes de Figuras
+public class TestaFiguras {
+    public static void main(String[] args) {
+        Circulo circulo = new Circulo();
+        circulo.raio = 3.0;
+        
+        Esfera esfera = new Esfera();
+        esfera.raio = 5.0;
+
+        System.out.println("Área do círculo: " + circulo.calcularArea());
+        System.out.println("Volume da esfera: " + esfera.calcularVolume());
+    }
+}
